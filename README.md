@@ -8,17 +8,17 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 ## Instruções para instalação e uso do aplicativo
 # Pré requisistos 
 
-1.Ter o Java versão 8 instalado (só funciona corretamente nesta versão do Java).
+1. Ter o Java versão 8 instalado (só funciona corretamente nesta versão do Java).
 
          https://www.java.com/pt-BR/
 
-2.Ter um banco de dados local baseado no MySQL 8 ou MariaDB compatível, no exemplo usei o XAMPP que pode ser obtido no link indicado
+2. Ter um banco de dados local baseado no MySQL 8 ou MariaDB compatível, no exemplo usei o XAMPP que pode ser obtido no link indicado
         
         https://www.apachefriends.org/
 
 # Instalação do banco
 
-1.Iniciar os serviços Apache e MySQL no XAMPP, conforme indicado na imagem.
+1. Iniciar os serviços Apache e MySQL no XAMPP, conforme indicado na imagem.
 
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/xampp1.png"></img>
 
@@ -27,6 +27,15 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/xampp2.png"></img>
 
 
-3.Crie um novo banco de dados de nome dbinfox conforme indicado na imagem.
+3. Crie um novo banco de dados de nome dbinfox conforme indicado na imagem.
 
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/Sistema%20OS/infox-master/assets/infoxtela1.png?raw=true"></img>
+
+4. Na aba SQL, copie e cole o código abaixo e execute. (Passos 1,2 e 3 indicados na imagem)
+
+     ´´´java
+    create table tbusuarios(iduser int primary key,usuario varchar(15) not null,fone varchar(15),login varchar(15) not null unique,senha varchar(250) not null,perfil varchar(20) not null);
+insert into tbusuarios(iduser,usuario,login,senha,perfil) values(1,'Administrador','admin',md5('admin'),'admin');
+create table tbclientes(idcli int primary key auto_increment,nomecli varchar(50) not null,endcli varchar(100),fonecli varchar(15) not null,emailcli varchar(50) unique);
+create table tbos(os int primary key auto_increment,data_os timestamp default current_timestamp,tipo varchar(15) not null,situacao varchar(20) not null,equipamento varchar(150) not null,defeito varchar(150),servico varchar(150),tecnico varchar(30),valor decimal(10,2),idcli int not null,foreign key(idcli) references tbclientes(idcli));
+
