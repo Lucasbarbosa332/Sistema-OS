@@ -55,8 +55,8 @@ create table tbos(os int primary key auto_increment,data_os timestamp default cu
 1. Em Releases faça o download do arquivo dist.zip
 
 2. Descompactar e executar o arquivo prjinfoX.jar Verifique na tela de login o ícone que representa o banco de dados conectado. Se estiver com erro (conforme indicado na figura) verifique o XAMPP e revise novamente os passos 1 a 4 da instalação do banco.
-<img width=100% src=""></img>
 
+<img width=100% src=""></img>
 
 3. Se tudo estiver OK você pode iniciar fazendo o login com o usuário admin e a senha admin (esta senha pode ser alterada posteriormente). Ao logar o sistema direciona para tela principal onde podem ser cadastrados novos usuários, clientes e OS. O sistema permite também a emissão de relatórios.
 
