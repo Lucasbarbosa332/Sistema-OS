@@ -40,7 +40,7 @@ Este repositório contém um exemplo de criação de tabelas para um sistema de 
 
 ## Estrutura do Banco de Dados
 
-```sql
+
 -- Criação da tabela tbusuarios para armazenar informações de usuários
 create table tbusuarios(
   iduser int primary key,                  -- Identificador único para o usuário
@@ -78,4 +78,7 @@ create table tbos(
   idcli int not null,                      -- Chave estrangeira referenciando o cliente
   foreign key(idcli) references tbclientes(idcli) -- Relaciona a OS ao cliente na tabela tbclientes
 );
+
+<img width=100% src=""></img>
+
 
