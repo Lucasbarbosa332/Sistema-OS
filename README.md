@@ -33,7 +33,15 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 
 4. Na aba SQL, copie e cole o código abaixo e execute. (Passos 1,2 e 3 indicados na imagem)
 
-     -- Criação da tabela tbusuarios para armazenar informações de usuários
+
+    # Exemplo de Banco de Dados SQL
+
+Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
+
+## Estrutura do Banco de Dados
+
+```sql
+-- Criação da tabela tbusuarios para armazenar informações de usuários
 create table tbusuarios(
   iduser int primary key,                  -- Identificador único para o usuário
   usuario varchar(15) not null,            -- Nome do usuário, campo obrigatório
