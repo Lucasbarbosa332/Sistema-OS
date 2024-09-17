@@ -11,3 +11,5 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 1.Ter o Java versão 8 instalado (só funciona corretamente nesta versão do Java).
 
          https://www.java.com/pt-BR/
+
+2.Ter um banco de dados local baseado no MySQL 8 ou MariaDB compatível, no exemplo usei o XAMPP que pode ser obtido no link indicado
