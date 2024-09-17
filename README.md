@@ -9,3 +9,5 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 # Pré requisistos 
 
 1.Ter o Java versão 8 instalado (só funciona corretamente nesta versão do Java).
+
+         https://www.java.com/pt-BR/
