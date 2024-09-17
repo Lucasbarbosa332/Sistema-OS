@@ -26,3 +26,7 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/xampp2.png"></img>
 
+
+3.Crie um novo banco de dados de nome dbinfox conforme indicado na imagem.
+
+<img width=100% src=""></img>
