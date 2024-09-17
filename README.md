@@ -21,3 +21,5 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 1.Iniciar os serviços Apache e MySQL no XAMPP, conforme indicado na imagem.
 
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/xampp1.png"></img>
+
+2.No navegador de internet digite: localhost/dashboard e selecione no menu: phpMyAdmin conforme indicado na imagem.
