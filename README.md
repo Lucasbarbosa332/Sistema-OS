@@ -51,4 +51,4 @@ create table tbos(os int primary key auto_increment,data_os timestamp default cu
 
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/Sistema%20OS/infox-master/assets/infoxtela2.png?raw=true"></img>
 
-
+# Instalação do aplicativo
