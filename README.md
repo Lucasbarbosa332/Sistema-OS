@@ -60,4 +60,67 @@ create table tbos(os int primary key auto_increment,data_os timestamp default cu
 
 3. Se tudo estiver OK você pode iniciar fazendo o login com o usuário admin e a senha admin (esta senha pode ser alterada posteriormente). Ao logar o sistema direciona para tela principal onde podem ser cadastrados novos usuários, clientes e OS. O sistema permite também a emissão de relatórios.
 
-<img width=100% src=""></img>
+<img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/Sistema%20OS/infox-master/assets/infoxtela4.png?raw=true"></img>
+
+# Bibliotecas
+      http://atxy2k.github.io/RestrictedTextField/
+
+      https://dev.mysql.com/downloads/connector/j/
+
+      https://sourceforge.net/projects/finalangelsanddemons/files/rs2xml.jar/download
+
+# Ferramentas  
+      https://adoptopenjdk.net/
+
+      https://netbeans-ide.informer.com/8.2/
+
+      https://sourceforge.net/projects/ireport/ 
+
+      https://jrsoftware.org/isinfo.php
+
+
+# Exemplo de Banco de Dados SQL
+
+Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
+
+## Estrutura do Banco de Dados
+
+```sql
+-- Criação da tabela tbusuarios para armazenar informações de usuários
+create table tbusuarios(
+  iduser int primary key,                  -- Identificador único para o usuário
+  usuario varchar(15) not null,            -- Nome do usuário, campo obrigatório
+  fone varchar(15),                        -- Telefone do usuário, campo opcional
+  login varchar(15) not null unique,       -- Nome de login, deve ser único
+  senha varchar(250) not null,             -- Senha do usuário (geralmente criptografada), campo obrigatório
+  perfil varchar(20) not null              -- Perfil do usuário (ex: 'admin', 'user'), campo obrigatório
+);
+
+-- Inserção de um usuário administrador inicial na tabela tbusuarios
+insert into tbusuarios(iduser,usuario,login,senha,perfil) 
+values(1,'Administrador','admin',md5('admin'),'admin');
+
+-- Criação da tabela tbclientes para armazenar informações de clientes
+create table tbclientes(
+  idcli int primary key auto_increment,    -- Identificador único do cliente, auto_increment para gerar automaticamente
+  nomecli varchar(50) not null,            -- Nome do cliente, campo obrigatório
+  endcli varchar(100),                     -- Endereço do cliente, campo opcional
+  fonecli varchar(15) not null,            -- Telefone do cliente, campo obrigatório
+  emailcli varchar(50) unique              -- Email do cliente, campo único
+);
+
+-- Criação da tabela tbos para armazenar informações sobre ordens de serviço (OS)
+create table tbos(
+  os int primary key auto_increment,       -- Identificador único da OS, auto_increment
+  data_os timestamp default current_timestamp, -- Data da OS com timestamp padrão no momento da criação
+  tipo varchar(15) not null,               -- Tipo de serviço (ex: 'manutenção', 'instalação'), campo obrigatório
+  situacao varchar(20) not null,           -- Situação da OS (ex: 'em andamento', 'concluída'), campo obrigatório
+  equipamento varchar(150) not null,       -- Descrição do equipamento, campo obrigatório
+  defeito varchar(150),                    -- Descrição do defeito (opcional)
+  servico varchar(150),                    -- Descrição do serviço realizado (opcional)
+  tecnico varchar(30),                     -- Nome do técnico responsável, opcional
+  valor decimal(10,2),                     -- Valor do serviço, opcional
+  idcli int not null,                      -- Chave estrangeira referenciando o cliente
+  foreign key(idcli) references tbclientes(idcli) -- Relaciona a OS ao cliente na tabela tbclientes
+);
+
