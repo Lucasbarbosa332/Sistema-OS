@@ -38,9 +38,9 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
 
 Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
 
-## Estrutura do Banco de Dados
+## Estrutura do Banco de Dados copie todo codigo abaixo 
 
-``sql
+
 create table tbusuarios(iduser int primary key,usuario varchar(15) not null,fone varchar(15),login varchar(15) not null unique,senha varchar(250) not null,perfil varchar(20) not null);
 insert into tbusuarios(iduser,usuario,login,senha,perfil) values(1,'Administrador','admin',md5('admin'),'admin');
 create table tbclientes(idcli int primary key auto_increment,nomecli varchar(50) not null,endcli varchar(100),fonecli varchar(15) not null,emailcli varchar(50) unique);
