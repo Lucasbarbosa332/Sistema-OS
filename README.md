@@ -13,3 +13,5 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
          https://www.java.com/pt-BR/
 
 2.Ter um banco de dados local baseado no MySQL 8 ou MariaDB compatível, no exemplo usei o XAMPP que pode ser obtido no link indicado
+        
+        https://www.apachefriends.org/
