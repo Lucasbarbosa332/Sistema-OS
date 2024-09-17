@@ -52,3 +52,6 @@ create table tbos(os int primary key auto_increment,data_os timestamp default cu
 <img width=100% src="https://github.com/Lucasbarbosa332/Sistema-os/blob/main/Sistema%20OS/infox-master/assets/infoxtela2.png?raw=true"></img>
 
 # Instalação do aplicativo
+1. Em Releases faça o download do arquivo dist.zip
+
+2. Descompactar e executar o arquivo prjinfoX.jar Verifique na tela de login o ícone que representa o banco de dados conectado. Se estiver com erro (conforme indicado na figura) verifique o XAMPP e revise novamente os passos 1 a 4 da instalação do banco.
