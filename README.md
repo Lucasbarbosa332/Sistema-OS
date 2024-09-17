@@ -17,3 +17,7 @@ Sistema OS é um sistema desktop(Windows, Linux ou MAC) para gestão de ordem de
         https://www.apachefriends.org/
 
 # Instalação do banco
+
+1.Iniciar os serviços Apache e MySQL no XAMPP, conforme indicado na imagem.
+
+<img width=100% src=""></img>
