@@ -79,6 +79,16 @@ create table tbos(os int primary key auto_increment,data_os timestamp default cu
       https://jrsoftware.org/isinfo.php
 
 
+# Tecnologias que são abordadas neste projeto
+
+* Criação de banco de dados e tabelas no MySQL
+* CRUD (Create Read Update e Delete)
+* IDE Netbeans
+* Java SE
+* JDBC (Java Database Connectivity)
+* Validação de dados
+* Uso do framework iReport para gerar relatórios
+
 # Exemplo de Banco de Dados SQL
 
 Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
